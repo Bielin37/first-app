@@ -1,0 +1,99 @@
+<div class="container">
+  <div class="row col-md-12">
+  <table [formGroup]="monthForm" class="table form">
+    <thead>
+      <tr>
+        <th scope="col">dany miesiąc</th>
+        <th scope="col">kwota w złotych</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Styczeń</td>
+        <td><input formControlName="one" type="number" class="form-control" #one >
+            <p *ngIf="!monthForm.get('one').value && monthForm.get('one').dirty" class="error">To pole jest wymagane, wyłącznie cyfry</p>
+        </td>
+      </tr>
+      <tr>
+        <td>Luty</td>
+        <td><input formControlName="two" type="number" class="form-control" #two >
+          <p *ngIf="!monthForm.get('two').prop && monthForm.get('two').dirty" class="error">To pole jest wymagane, wyłącznie cyfry</p>
+        </td>
+      </tr>
+      <tr>
+        <td>Marzec</td>
+        <td><input formControlName="three" type="number" class="form-control" #three>
+          <p *ngIf="!monthForm.get('three').value && monthForm.get('three').dirty" class="error">To pole jest wymagane, wyłącznie cyfry</p>
+        </td>
+      </tr>
+      <tr>
+        <td>Kwiecień</td>
+        <td><input formControlName="four" type="number" class="form-control" #four>
+          <p *ngIf="!monthForm.get('four').value && monthForm.get('four').dirty" class="error">To pole jest wymagane, wyłącznie cyfry</p>
+        </td>
+      </tr>
+      <tr>
+        <td>Maj</td>
+        <td><input formControlName="five" type="number" class="form-control" #five>
+          <p *ngIf="!monthForm.get('five').value && monthForm.get('five').dirty" class="error">To pole jest wymagane, wyłącznie cyfry</p>
+        </td>
+      </tr>
+      <tr>
+        <td>Czerwiec</td>
+        <td><input formControlName="six" type="number" class="form-control" #six>
+          <p *ngIf="!monthForm.get('six').value && monthForm.get('six').dirty" class="error">To pole jest wymagane, wyłącznie cyfry</p>
+        </td>
+      </tr>
+      <tr>
+        <td>Lipiec</td>
+        <td><input formControlName="seven" type="number" class="form-control" #seven>
+          <p *ngIf="!monthForm.get('seven').value && monthForm.get('seven').dirty" class="error">To pole jest wymagane, wyłącznie cyfry</p>
+        </td>
+      </tr>
+      <tr>
+        <td>Sierpień</td>
+        <td><input formControlName="eight" type="number" class="form-control" #eight>
+          <p *ngIf="!monthForm.get('eight').value && monthForm.get('eight').dirty" class="error">To pole jest wymagane, wyłącznie cyfry</p>
+        </td>
+      </tr>
+      <tr>
+        <td>Wrzesień</td>
+        <td><input formControlName="nine" type="number" class="form-control" #nine>
+          <p *ngIf="!monthForm.get('nine').value && monthForm.get('nine').dirty" class="error">To pole jest wymagane, wyłącznie cyfry</p>
+        </td>
+      </tr>
+      <tr>
+        <td>Październik</td>
+        <td><input formControlName="ten" type="number" class="form-control" #ten>
+          <p *ngIf="!monthForm.get('ten').value && monthForm.get('ten').dirty" class="error">To pole jest wymagane, wyłącznie cyfry</p>
+        </td>
+      </tr>
+      <tr>
+        <td>Listopad</td>
+        <td><input formControlName="eleven" type="number" class="form-control" #eleven>
+          <p *ngIf="!monthForm.get('eleven').value && monthForm.get('eleven').dirty" class="error">To pole jest wymagane, wyłącznie cyfry</p>
+        </td>
+      </tr>
+      <tr>
+        <td>Grudzień</td>
+        <td><input formControlName="twelve" type="number" class="form-control" #twelve >
+          <p *ngIf="!monthForm.get('twelve').value && monthForm.get('twelve').dirty" class="error">To pole jest wymagane, wyłącznie cyfry</p>
+        </td>
+      </tr>
+      <tr>
+        <td><button [disabled]=monthForm.invalid type="submit" class="btn btn-primary" (click)="count(one.value,
+          two.value, three.value, four.value,
+          five.value, six.value, seven.value,
+          eight.value, nine.value, ten.value,
+          eleven.value, twelve.value)">Oblicz</button></td>
+      </tr>
+      <tr>
+        <span>Całkowity koszt prądu to: {{sume}}</span>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="row col-md-6">
+
+  </div>
+</div>
